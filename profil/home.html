@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+        <title>HOME</title>
+        <link rel="stylesheet" href="assets/css/style_home.css">
+        <meta name="viewreport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    
+    <body>
+        <div>
+        <nav>
+            <div class="menu-mobile">
+                <a href="">MENU</a>
+            </div>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="pembayaran.html">RESERVASI</a></li>
+                <li><a href="tagihan.html">TAGIHAN</a></li>
+                <li><a href="about-us.html">ABOUT US</a></li>
+            </ul>
+        </nav>
+        </div>
+
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card">
+                    <h2>SELAMAT DATANG DI NAMA_HOTEL - BANDUNG</h2>
+                    <div>
+                        <img src="assets/deskripsi.jpg" style="height: 100%; width: 100%;">
+                    </div>
+                    <p>
+                        Pilihan tepat saat berpergian untuk bisnis atau liburan, NAMA_HOTEL - Barang memiliki jumlah_kamar kamar
+                        dengan lokasi strategis di pusat kota, sangat dekat dengan pusat kota Bandung. Hotel ini dengan mudah diakses
+                        dari segala arah seperti ... (dapat ditempuh dengan berjalan kaki), kawasan ... (2 km) sebagai pusat kantor 
+                        pemerintahan, kawasan perbelanjaan dan hiburan. Stasiun Kereta Api (3 km), dan Bandara (13 km). 
+                    </p>
+                    <p>
+                        Mendefinisikan hotel dengan nilai lebih, NAMA_HOTEL - Bandung menawarkan harga inclusive untuk setiap kamar,
+                        setiap malam. Semua kamar memiliki Wi-Fi berkecepatan tinggi gratis, shower yang menenagkan, tempat tidur 
+                        berdesain khusus berkualitas dengan linen kelas atas dan banyak fasilitas lainnya termasuk AC, meja kerja, 
+                        brankas dalam kamar, kulkas, alat pembuat teh dan kopi, TV, dan yang paling istimewa adalah balkon pribadi
+                        di setiap kamar. Fasilitas hotel meliputi kolam renang terbuka untuk anak-anak dan orang dewasa, restoran
+                        yang menyediakan makanan tradisional dan internasional, layanan kamar 24 jam, pusat bisnis, Lobby Longue, 
+                        Pijat & Spa, dan bantuan pengaturan wisata dan layanan antar- jemput bandara gratis (berdasarkan jadwal).
+                    </p>
+                </div>
+                <div class="card">
+                    <h2>LOKASI NAMA_HOTEL</h2>
+                    <script src="http://maps.googleapis.com/maps/api/js"></script>
+                    <script>
+                    function initialize() {
+                    var propertiPeta = {
+                        center:new google.maps.LatLng(-8.5830695,116.3202515),
+                        zoom:9,
+                        mapTypeId:google.maps.MapTypeId.ROADMAP
+                    };
+                    var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
+                    } 
+                    google.maps.event.addDomListener(window, 'load', initialize);
+                    </script>
+                    <div>
+                        <id="googleMap" style="width:100%;height:380px;">
+                    </div>
+                    <h5>Title description, Sep 2, 2017</h5>
+                    <p>
+                        NAMA_HOTEL - Bandung mudah diaksess dari semua arah seperti ... (berjalan kaki) yang terkenal dengan pasar Semawis 
+                        pada hari Jumat dan Sabtu malam, area Simpang Lima sebagai pusat kantor pemerintahan, area perbelanjaan dan hiburan,
+                        Kereta Api Stasiun (3 km) dan Bandara (13 km).
+                    </p>
+                </div>
+            </div>
+
+            <div class="rightcolumn">
+                <div class="card">
+                    <h2>About Me</h2>
+                    <div class="fakeimg" style="height: 100px;">Image</div>
+                    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+                </div>
+                <div class="card">
+                    <h3>Popular Post</h3>
+                    <div class="fakeimg"><p>Image</p></div>
+                    <div class="fakeimg"><p>Image</p></div>
+                    <div class="fakeimg"><p>Image</p></div>    
+                </div>
+                <div class="card">
+                    <div style="position:fixed;left:20px;bottom:20px;">
+                        <a href="https://api.whatsapp.com/send?phone=+622335320808&text=Halo">
+                        <button style="background:#32C03C;vertical-align:center;height:36px;border-radius:5px">
+                        <img src="https://web.whatsapp.com/img/favicon/1x/favicon.png"> Whatsapp Kami</button></a>
+                        </div>
+                    <p>+622335320808</p>
+                    <p>+62247720490872</p>
+                    <p>SimpangLimaInf@Quest-Hotels.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>Footer</h2>
+        </div>
+    </body>
+</html>
