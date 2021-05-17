@@ -1,3 +1,5 @@
-# Projekan sisdat1
+# Sistem Reservasi Hotel
 
-Membuat aplikasi atau web dengan pengintegrasian database.
+- Rangga Putra (140810200007)
+- Wildan Hanif Musyaffa (140810200051)
+- Muhamad Davio Athallah (140810200063)
