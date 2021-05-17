@@ -1,0 +1,55 @@
+<?php
+    include "koneksi.php";
+    $sql = mysqli_query($koneksi, "SELECT * FROM kamar WHERE no_kamar='$_GET[kode]'");
+    $data = mysqli_fetch_array($sql);
+?>
+<html>
+    <h3>UBAH DATA KAMAR</h3>
+    <form action="" method="POST">
+        <table>
+            <tr>
+                <td width="120">No Kamar</td>
+                <td> <?php echo $data['no_kamar'];?></td>
+            </tr>
+            <tr>
+                <td width="120">Tipe Kamar</td>
+                <td><input type="text" name="tipe_kamar" value="<?php echo $data['tipe_kamar'];?>"></td>
+            </tr>
+            <tr>
+                <td width="120">Harga</td>
+                <td> <input type="text" name="harga" value="<?php echo $data['harga'];?>"> </td>
+            </tr>
+            <tr>
+               <td width="120">ID Pegawai</td>
+               <td> <select name="id_pegawai" class = "jenis_kmr">
+                        <option value="<?php echo $data['id_pegawai'];?>"><?php echo $data['id_pegawai'];?></option>
+                            <?php
+                                $sql = "SELECT * FROM pegawai ORDER BY id_pegawai";
+                                $result = mysqli_query($koneksi,$sql);
+                                while($row = mysqli_fetch_array($result)){
+                                    echo "<option value = '". $row['id_pegawai'] ."'>".$row['id_pegawai']."</option>";
+                                }
+                            ?>   
+                    </select>
+                </td> 
+            </tr>
+            <tr>
+                <td width="120"></td>
+                <td> <input type="submit" name="ubah" value="UBAH"></td>
+            </tr>
+        </table>
+    </form>
+</html>
+<?php
+    include "koneksi.php";
+    if(isset($_POST['ubah'])){  
+        $sql = "UPDATE kamar SET
+        tipe_kamar = '$_POST[tipe_kamar]',
+        harga = '$_POST[harga]',
+        id_pegawai = '$_POST[id_pegawai]'
+        WHERE no_kamar = '$_GET[kode]'";
+        mysqli_query($koneksi,$sql);
+        
+        echo "<meta http-equiv=refresh content=2;URL='admin-read-kamar.php'>";
+    }
+?>
