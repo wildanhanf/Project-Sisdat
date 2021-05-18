@@ -38,12 +38,10 @@
                 </label>
                 <input type="text" class=" form form-content" style="width: 200px" name="harga" autocomplete="on" required/>
                 <div class="form-border"></div>
-                <label for="user-email" c lass=" form form-content" style="padding-top: 13px;">&nbsp;
+                <label for="user-email" class=" form form-content" style="padding-top: 13px;">&nbsp;
                     ID Pegawai
-                    <p> </p>
-                    <p> </p>
-                </label>
-                <select name="id_pegawai">
+                </label> <br>
+                <select name="id_pegawai" class = "jenis_kmr" style="width: 275px">
                     <option value="0">Pilih ID Pegawai</option>
                         <?php
                             include "koneksi.php";

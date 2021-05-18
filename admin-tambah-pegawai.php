@@ -55,13 +55,15 @@
     include "koneksi.php";
 
     if(isset($_POST['submit'])){
-        mysqli_query($koneksi,"INSERT INTO pegawai SET
-          id_pegawai = '$_POST[id_pegawai]',
-          nama_pegawai = '$_POST[nama_pegawai]',
-          no_hp_pegawai = '$_POST[no_hp]',
-          alamat = '$_POST[alamat]'
-        ");
+        $sql = "INSERT INTO pegawai SET
+        id_pegawai = '$_POST[id_pegawai]',
+        nama_pegawai = '$_POST[nama_pegawai]',
+        no_hp_pegawai = '$_POST[no_hp]',
+        alamat = '$_POST[alamat]'";
+
+        mysqli_query($koneksi,$sql);
         echo "AKUN ANDA TERDAFTAR";
+        //echo $sql;
         echo "<meta http-equiv=refresh content=2;URL='admin-read-pegawai.php'>";
     }
 ?>

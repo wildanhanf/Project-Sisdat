@@ -78,12 +78,7 @@ label{
     outline: none;
     padding-top: 14px;
 }
-.underline-title{
-    background: -webkit-linear-gradient(right,#3498db, #9b59b6);
-    height: 2px;
-    margin: -1.1rem auto 0 auto;
-    width: 89px;
-}
+
 
 @media(min-width:321px) and (max-width : 425px){
     section#box-profile{

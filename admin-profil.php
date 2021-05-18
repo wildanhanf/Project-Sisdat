@@ -5,7 +5,7 @@
     <title>Database Reservasi Hotel</title>
     <style type="text/css">
 body{
-background-color: #e9e6da;
+background-color: none;
 color: #3c3c3c;
 font-family: Tw Cen MT;
 font-weight: normal;
@@ -54,7 +54,7 @@ color: #ffffff;
             <h1>Database Reservasi Hotel</h1>
             <a href="admin-read-kamar.php" class="button">KAMAR</a><br>
             <a href="admin-read-customer.php" class="button">CUSTOMER</a><br>
-            <a href="admin-read-pegawai" class="button">PEGAWAI</a>
+            <a href="admin-read-pegawai.php" class="button">PEGAWAI</a>
         </center>
     </div>
 </body>

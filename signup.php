@@ -13,8 +13,7 @@
         <div id="card">
             <div id="card-content">
                 <div id="card-title">
-                    <h2>Sign Up.</h2>
-                    <div class="underline-title"></div>
+                    <h2>Sign Up</h2>
                 </div>
             </div>
             <form method="post" class="form">
@@ -35,7 +34,7 @@
                 <label for="user-id" style="padding-top: 13px;" class="form_name">&nbsp;
                     NO KTP
                 </label>
-                <input id="user-id" class=" form form-content" type="number" style="width: 200px;"
+                <input id="user-id" class=" form form-content" type="text" style="width: 200px;"
                 name="no_ktp" autocomplete="on" required/>
                 <div class="form-border"> </div>
 
@@ -77,5 +76,7 @@
           password  = '$_POST[password]'
         ");
         echo "AKUN ANDA TERDAFTAR";
+        echo "<meta http-equiv=refresh content=2;URL='login.php'>";
+    
     }
 ?>

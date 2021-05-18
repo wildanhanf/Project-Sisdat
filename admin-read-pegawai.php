@@ -45,5 +45,15 @@
             </div>
         <!-- Akhir Card Tabel-->    
         </div>   
-        <script type="text/javascript" scr="js/bootstrap.min.js"></script>    
+        <script type="text/javascript" scr="js/bootstrap.min.js"></script>
+        <br>
+        <div class="button1">
+            <a href="admin-profil.php">
+                <button style="margin-left: 75%; margin-bottom:30%">Kembali</button>
+            </a>
+            <a href="admin-logout.php">
+                <button>Log Out</button>
+            </a>    
+        </div>
+    </body>
 </html>

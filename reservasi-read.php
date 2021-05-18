@@ -28,7 +28,7 @@
                 <li><a href="profil.php">HOME</a></li>
                 <li><a href="reservasi.php">RESERVASI</a></li>
                 <li><a href="logout.php">LOG OUT</a></li>
-            </ul><br><br>
+            </ul><br><br><br><br>
         <div class="center">
             <div class="card">
                 <div>
@@ -57,17 +57,24 @@
                 <div>
                     <label>Jenis Pembayaran :</label><br>
                     <?php echo $data['jenis_pembayaran']?>
+                    <br> <br>
                 </div>
                 <div>
-                    <?php 
-                        echo "<a href='?hapus=$data[no_reservasi]'>CANCEL</a>";
-                        echo " <a href= profil.php>SELESAI</a>";
-                    ?>
+                    <a href="profil.php">
+                    <button> Selesai </button>
+                    </a>
                 </div>
-                <div class="row">
-                    <input type="finish" value="Finish" name="finish">
-                    <input type="cancel" value="Cancel" name="cancel">
+                <div>
+                    <button>
+                        <?php 
+                            echo "<a href='?hapus=$data[no_reservasi]'>Cancel</a>";
+                        ?>
+                    </button>
                 </div>
+                
+            
+            </div>
+
         </div>
     </body>
 </html>

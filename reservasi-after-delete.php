@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
     <head>
@@ -23,7 +23,7 @@
                 <li><a href="profil.php">HOME</a></li>
                 <li><a href="reservasi.php">RESERVASI</a></li>
                 <li><a href="logout.php">LOG OUT</a></li>
-            </ul><br><br>
+            </ul><br><br><br><br>
             <div class="center">
                 <div class="card">
                     <div class="row">

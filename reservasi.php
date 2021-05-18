@@ -16,14 +16,22 @@
     </head>
     
     <body>
+        <div>
         <nav>
-            
+            <div class="menu-mobile">
+            </div>
+            <al>
+                <li><a href="profil.php">
+                    <img src="profil/assets/kntl.png" style="height: 70%; width: 70%" class="float">
+                </a></li>
+                </al>
             <ul>
                 <li><a href="profil.php">HOME</a></li>
                 <li><a href="reservasi.php">RESERVASI</a></li>
                 <li><a href="logout.php">LOG OUT</a></li>
             </ul>
         </nav>
+        </div>
 
         <div class="row">
             <div class="rightcolumn_kamar">
@@ -102,7 +110,7 @@
                                         $sql = "SELECT * FROM customer ORDER BY no_ktp";
                                         $result = mysqli_query($koneksi,$sql);
                                         while($row = mysqli_fetch_array($result)){
-                                            echo "<option value = '". $row['no_ktp'] ."'>".$row['no_ktp']."</option>";
+                                            echo "<option value = '". $row['no_ktp'] ."'>".$row['no_ktp']." - ". $row['nama_customer']."</option>";
                                         }
                                     ?>   
                             </select>
@@ -117,7 +125,7 @@
                                         $sql = "SELECT * FROM kamar ORDER BY no_kamar";
                                         $result = mysqli_query($koneksi,$sql);
                                         while($row = mysqli_fetch_array($result)){
-                                            echo "<option value = '". $row['no_kamar'] ."'>".$row['no_kamar']."</option>";
+                                            echo "<option value = '". $row['no_kamar'] ."'>".$row['no_kamar']." - ".$row['tipe_kamar']."</option>";
                                         }
                                     ?>   
                             </select>
@@ -138,15 +146,15 @@
                             </select>
                         </div>
 
-                        <div>
-                            <!-- Jenis Kamar -->
+                        <!--<div>
+                            Jenis Kamar 
                             <label for="jenis_kamar">JENIS KAMAR</label> <br>
                             <select name="jenis_kamar" class="jenis_kmr">
                                 <option value="jenis_kamar_1">Jenis Kamar 1</option>
                                 <option value="jenis_kamar_2">Jenis Kamar 2</option>
                                 <option value="jenis_kamar_3">Jenis Kamar 3</option>
                             </select>
-                        </div>
+                        </div> -->
 
                         <div>
                             <!-- Tanggal Check In -->
@@ -168,30 +176,28 @@
                                 <option value="GO-PAY">GO-PAY</option>
                                 <option value="OVO">OVO</option>
                             </select>
-                        </div>
-                        
-                            <?php
-                                //mengambil data barang dengan kode paling besar
-                                $query = mysqli_query($koneksi, "SELECT MAX(no_reservasi) AS no_reservasi_next FROM reservasi");
-                                $data = mysqli_fetch_array($query);
-                                $id_reservasi = $data['no_reservasi_next'];
-                                
-                                // mengambil angka dari kode barang terbesar, menggunakan fungsi substr
-                                // dan diubah ke integer dengan(int)
-                                $urutan = (int) substr($id_reservasi,3,4);
+                        </div>          
+                                <?php
+                                    //mengambil data barang dengan kode paling besar
+                                    $query = mysqli_query($koneksi, "SELECT MAX(no_reservasi) AS no_reservasi_next FROM reservasi");
+                                    $data = mysqli_fetch_array($query);
+                                    $id_reservasi = $data['no_reservasi_next'];
+                                    
+                                    // mengambil angka dari kode barang terbesar, menggunakan fungsi substr
+                                    // dan diubah ke integer dengan(int)
+                                    $urutan = (int) substr($id_reservasi,3,4);
 
-                                //bilangan yang diambil ini ditambah 1 untuk menentukan nomor urut berikutnya
-                                $urutan++;
+                                    //bilangan yang diambil ini ditambah 1 untuk menentukan nomor urut berikutnya
+                                    $urutan++;
 
-                                //membentuk kode barang baru
-                                //perintah sprintf("%03s", 15); maka akan menghasilkan 015
-                                //angka yang diambil tadi digabungkkan dengan kode huruf yang kita inginkan, misalnya BRG
-                                $huruf = "RSV";
-                                $id_reservasi = $huruf . sprintf("%04s", $urutan);
-                                echo "<input type='hidden' name = 'no_reservasi' value='".$id_reservasi."'/>";
-                                echo $id_reservasi;
-                            ?>
-
+                                    //membentuk kode barang baru
+                                    //perintah sprintf("%03s", 15); maka akan menghasilkan 015
+                                    //angka yang diambil tadi digabungkkan dengan kode huruf yang kita inginkan, misalnya BRG
+                                    $huruf = "RSV";
+                                    $id_reservasi = $huruf . sprintf("%04s", $urutan);
+                                    echo "<input type='hidden' name = 'no_reservasi' value='".$id_reservasi."'/>";
+                                    //echo $id_reservasi;
+                                ?>
                         <div class="row">
                             <input type="submit" value="Submit" name="submit">
                         </div>

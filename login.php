@@ -15,8 +15,7 @@
         <div id="card">
             <div id="card-content">
                 <div id="card-title">
-                    <h2>Log In.</h2>
-                    <div class="underline-title"></div>
+                    <h2>Log In</h2>
                 </div>
             </div>
             <form method="post" class="form">
